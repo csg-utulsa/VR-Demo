@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/VR-Demo-Scene.unity
+    guid: 95eb69ad5177d9f49b18c6a6b26d89f2
+  - enabled: 1
+    path: Assets/Scenes/Networking Tests/NetworkTestSpawning.unity
+    guid: c05974ffebdb4f948b7affbc716acd0c
+  - enabled: 1
+    path: Assets/Scenes/Networking Tests/NetworkTestMenu.unity
+    guid: 54e90d060f2bdb14ebf347641c4600e2
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}
