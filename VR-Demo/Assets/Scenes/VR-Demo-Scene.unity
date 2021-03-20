@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d31d1e0c432cb4e9cf3b777adce08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMenuName: NetworkingTestMenu
+  startMenuName: NetworkTestMenu
   playerPrefabs:
   - {fileID: 2011475181158567433, guid: 81b86b10e47c6fd498e2a25141789d06, type: 3}
   spawnLocations:
