@@ -20,7 +20,7 @@ public class MenuManager : MonoBehaviour
     public void JoinGame()
     {
         ChooseCharacter(0);
-        NetworkManagerPhoton.instance.JoinRoom(roomName.text);
+        NetworkManagerPhoton.instance.JoinRoom();
     }
 
     public void ChooseCharacter(int type)

@@ -31,8 +31,6 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
 
     private string GameplaySceneName;
     private string roomName;
-    private bool joining = false;
-
     private void Awake()
     {
         if(instance != null && instance != this)
@@ -58,38 +56,9 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
         Disconnect();
     }
 
-    public void CreateRoom()
+    public void JoinRoom()
     {
-        if(roomName == null || roomName == "")
-        {
-            PhotonNetwork.CreateRoom($"Room {PhotonNetwork.CountOfRooms}");
-        }
-        else
-        {
-            PhotonNetwork.CreateRoom(roomName);
-        }
-    }
-
-    public void JoinRoom(string Rn)
-    {
-        if(joining == true)
-        {
-            return;
-        }
-
-        Debug.Log("Joining Room");
-
-        roomName = Rn;
-        joining = true;
-        if(roomName == null || roomName == "")
-        {
-            //PhotonNetwork.JoinRandomRoom();
-            CreateRoom();
-        }
-        else
-        {
-            PhotonNetwork.JoinOrCreateRoom(roomName, new RoomOptions(), TypedLobby.Default);
-        }
+        PhotonNetwork.JoinOrCreateRoom("Room 1", new RoomOptions(), TypedLobby.Default);
     }
 
     public void ChangeScene(string sceneName)
@@ -129,14 +98,12 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
-        joining = false;
         Debug.Log($"Joined Room: {PhotonNetwork.CurrentRoom.Name}");
         ChangeScene(GameplaySceneName);
     }
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
         Debug.Log($"Join Room Failed");
-        CreateRoom();
     }
     public override void OnDisconnected(DisconnectCause cause)
     {
