@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: 969977359}
   - component: {fileID: 969977358}
   - component: {fileID: 969977361}
+  - component: {fileID: 969977362}
   m_Layer: 5
   m_Name: JoinButton
   m_TagString: Untagged
@@ -871,7 +872,7 @@ RectTransform:
   m_GameObject: {fileID: 969977356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3494, y: 1.3494, z: 1.3494}
+  m_LocalScale: {x: 1.3494, y: 1.3494, z: 0.31694707}
   m_Children:
   - {fileID: 1950946583}
   m_Father: {fileID: 253831921}
@@ -989,7 +990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 131198873}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 969977362}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1033,6 +1035,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
+--- !u!65 &969977362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969977356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 150, y: 25, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1230459235
 GameObject:
   m_ObjectHideFlags: 0
