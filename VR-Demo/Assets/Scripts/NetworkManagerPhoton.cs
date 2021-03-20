@@ -77,11 +77,14 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
             return;
         }
 
+        Debug.Log("Joining Room");
+
         roomName = Rn;
         joining = true;
         if(roomName == null || roomName == "")
         {
-            PhotonNetwork.JoinRandomRoom();
+            //PhotonNetwork.JoinRandomRoom();
+            CreateRoom();
         }
         else
         {
