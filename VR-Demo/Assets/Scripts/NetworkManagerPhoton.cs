@@ -31,8 +31,6 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
 
     private string GameplaySceneName;
     private string roomName;
-    
-
     private void Awake()
     {
         if(instance != null && instance != this)
@@ -58,30 +56,9 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
         Disconnect();
     }
 
-    public void CreateRoom()
+    public void JoinRoom()
     {
-        if(roomName == null)
-        {
-            PhotonNetwork.CreateRoom($"Room {PhotonNetwork.CountOfRooms}");
-        }
-        else
-        {
-            PhotonNetwork.CreateRoom(roomName);
-        }
-    }
-
-    public void JoinRoom(string Rn)
-    {
-        roomName = Rn;
-
-        if(roomName == null)
-        {
-            PhotonNetwork.JoinRandomRoom();
-        }
-        else
-        {
-            PhotonNetwork.JoinOrCreateRoom(roomName, new RoomOptions(), TypedLobby.Default);
-        }
+        PhotonNetwork.JoinOrCreateRoom("Room 1", new RoomOptions(), TypedLobby.Default);
     }
 
     public void ChangeScene(string sceneName)

@@ -14,12 +14,13 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void JoinGame()
     {
-        NetworkManagerPhoton.instance.JoinRoom(roomName.text);
+        ChooseCharacter(0);
+        NetworkManagerPhoton.instance.JoinRoom();
     }
 
     public void ChooseCharacter(int type)
