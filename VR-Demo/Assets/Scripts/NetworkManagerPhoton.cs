@@ -60,7 +60,7 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        if(roomName == null)
+        if(roomName == null || roomName == "")
         {
             PhotonNetwork.CreateRoom($"Room {PhotonNetwork.CountOfRooms}");
         }
@@ -74,7 +74,7 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
     {
         roomName = Rn;
 
-        if(roomName == null)
+        if(roomName == null || roomName == "")
         {
             PhotonNetwork.JoinRandomRoom();
         }
@@ -127,6 +127,7 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
         Debug.Log($"Join Room Failed");
+        CreateRoom();
     }
     public override void OnDisconnected(DisconnectCause cause)
     {
