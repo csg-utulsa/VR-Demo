@@ -31,7 +31,7 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
 
     private string GameplaySceneName;
     private string roomName;
-    
+    private bool joining = false;
 
     private void Awake()
     {
@@ -72,8 +72,13 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
 
     public void JoinRoom(string Rn)
     {
-        roomName = Rn;
+        if(joining == true)
+        {
+            return;
+        }
 
+        roomName = Rn;
+        joining = true;
         if(roomName == null || roomName == "")
         {
             PhotonNetwork.JoinRandomRoom();
@@ -121,6 +126,7 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
+        joining = false;
         Debug.Log($"Joined Room: {PhotonNetwork.CurrentRoom.Name}");
         ChangeScene(GameplaySceneName);
     }
