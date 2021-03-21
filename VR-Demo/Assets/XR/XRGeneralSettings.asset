@@ -121,7 +121,12 @@ MonoBehaviour:
   m_RequiresSettingsUpdate: 0
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
+<<<<<<< Updated upstream
   m_Loaders: []
+=======
+  m_Loaders:
+  - {fileID: 11400000, guid: 9373ea50156f04740ae961a2c66d81a1, type: 2}
+>>>>>>> Stashed changes
 --- !u!114 &4897379186331661704
 MonoBehaviour:
   m_ObjectHideFlags: 0
