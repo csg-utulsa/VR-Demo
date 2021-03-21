@@ -342,18 +342,6 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 131198871}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &131198873 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7844471354054694376, guid: 81b86b10e47c6fd498e2a25141789d06,
-    type: 3}
-  m_PrefabInstance: {fileID: 131198871}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &170084409
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 131198873}
+  m_InteractionManager: {fileID: 0}
   m_Colliders:
   - {fileID: 969977362}
   m_InteractionLayerMask:
