@@ -331,7 +331,8 @@ MonoBehaviour:
   SceneNames:
   - NetworkTestSpawning
   - VR-Demo-Scene
-  gameplayScene: 1
+  - InteractablesTestScene
+  gameplayScene: 2
 --- !u!4 &375867982
 Transform:
   m_ObjectHideFlags: 0
