@@ -5,6 +5,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CustomGrabInteractable : XRGrabInteractable
 {
+    private Transform defaultParent;
+
+    private void Start()
+    {
+        defaultParent = GameObject.FindGameObjectWithTag("InteractableDefault").transform;
+    }
+
     protected override void OnSelectEntered(XRBaseInteractor interactor)
     {
         SetParentToXRRig();
@@ -24,6 +31,6 @@ public class CustomGrabInteractable : XRGrabInteractable
 
     public void SetParentToWorld()
     {
-        transform.SetParent(null);
+        transform.SetParent(defaultParent);
     }
 }
