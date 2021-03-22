@@ -12,6 +12,7 @@ public class Pistol : MonoBehaviour
     
     public void Fire()
     {
+        Debug.Log("Fire Gun");
         GameObject spawnedBullet = NetworkManagerPhoton.Instantiate(bullet, barrel.position, barrel.rotation);
         spawnedBullet.GetComponent<Rigidbody>().velocity = speed * barrel.forward;
         audioSource.PlayOneShot(audioClip);
