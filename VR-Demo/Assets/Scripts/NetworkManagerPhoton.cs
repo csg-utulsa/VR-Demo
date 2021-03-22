@@ -59,6 +59,7 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
 
     public void JoinRoom()
     {
+        Debug.Log("Attempt Join Room");
         PhotonNetwork.JoinOrCreateRoom("Room 1", new RoomOptions(), TypedLobby.Default);
     }
 
