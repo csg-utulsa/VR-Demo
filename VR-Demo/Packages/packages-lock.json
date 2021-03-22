@@ -135,13 +135,13 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.interaction.toolkit": {
-      "version": "1.0.0-pre.3",
+      "version": "0.10.0-preview.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.inputsystem": "1.0.2",
+        "com.unity.inputsystem": "1.0.0",
         "com.unity.ugui": "1.0.0",
-        "com.unity.xr.legacyinputhelpers": "2.1.7"
+        "com.unity.xr.legacyinputhelpers": "2.1.4"
       },
       "url": "https://packages.unity.com"
     },
@@ -188,7 +188,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr": {
-      "version": "1.0.3",
+      "version": "1.0.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
