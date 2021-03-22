@@ -11,7 +11,8 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
     private enum GameplayScene
     {
         NetworkTestSpawning,
-        VRDemoScene
+        VRDemoScene,
+        InteractablesTestScene
     }
 
 
