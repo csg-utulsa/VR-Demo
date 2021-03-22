@@ -681,19 +681,20 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_OnFirstHoverEntered:
+  m_CustomReticle: {fileID: 0}
+  m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  m_OnHoverEntered:
+  m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
-  m_OnHoverExited:
+  m_HoverEntered:
     m_PersistentCalls:
       m_Calls: []
-  m_OnLastHoverExited:
+  m_HoverExited:
     m_PersistentCalls:
       m_Calls: []
-  m_OnSelectEntered:
+  m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1592892027}
@@ -708,6 +709,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -720,7 +745,6 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_CustomReticle: {fileID: 0}
 --- !u!65 &969977362
 BoxCollider:
   m_ObjectHideFlags: 0
