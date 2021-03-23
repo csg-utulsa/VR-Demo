@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks
     public Behaviour[] localOnlyComponents;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         bool active = photonView.IsMine;
         foreach(GameObject obj in localOnlyObjects)
