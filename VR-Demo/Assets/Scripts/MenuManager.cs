@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     public InputField roomName;
-    public Canvas can; // Assign in inspector
-    can = GameObject.FindGameObjectWithTag("Credits").GetComponent<Canvas>();
+    public GameObject can;
 
   // Start is called before the first frame update
   void Start()
     {
-    }
+        can = GameObject.FindGameObjectWithTag("Credits").GetComponent<GameObject>();
+  }
 
     // Update is called once per frame
     void Update()
@@ -38,12 +38,17 @@ public class MenuManager : MonoBehaviour
         LoadGameScene();
     }
 
-    public void toggleCredits()
+    public void CreditsOn()
     {
-        can.enabled = !can.enabled;
+        can.SetActive(true);
     }
 
-    public void ExitGame()
+  public void CreditsOff()
+  {
+    can.SetActive(false);
+  }
+
+  public void ExitGame()
     {
 
     }
