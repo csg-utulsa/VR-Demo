@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 945107594506114352, guid: 81b86b10e47c6fd498e2a25141789d06,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2011475181158567433, guid: 81b86b10e47c6fd498e2a25141789d06,
         type: 3}
       propertyPath: m_Name
@@ -192,8 +197,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5210259515832369625, guid: 81b86b10e47c6fd498e2a25141789d06,
         type: 3}
-      propertyPath: localOnlyComponents.Array.data[4]
-      value: 
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81b86b10e47c6fd498e2a25141789d06, type: 3}
@@ -331,7 +336,8 @@ MonoBehaviour:
   - NetworkTestSpawning
   - VR-Demo-Scene
   - InteractablesTestScene
-  gameplayScene: 2
+  - Terrain
+  gameplayScene: 3
 --- !u!4 &375867982
 Transform:
   m_ObjectHideFlags: 0
