@@ -8,11 +8,11 @@ public class MenuManager : MonoBehaviour
     public InputField roomName;
     public GameObject can;
 
-  // Start is called before the first frame update
-  void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         can = GameObject.FindGameObjectWithTag("Credits").GetComponent<GameObject>();
-  }
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,13 +26,13 @@ public class MenuManager : MonoBehaviour
         NetworkManagerPhoton.instance.JoinRoom();
     }
 
-  public void JoinGameRover()
-  {
-    ChooseCharacter(1);
-    NetworkManagerPhoton.instance.JoinRoom();
-  }
+    public void JoinGameRover()
+    {
+        ChooseCharacter(1);
+        NetworkManagerPhoton.instance.JoinRoom();
+    }
 
-  public void ChooseCharacter(int type)
+    public void ChooseCharacter(int type)
     {
         PlayerPrefs.SetInt("PlayerType", type);
         LoadGameScene();
@@ -43,12 +43,12 @@ public class MenuManager : MonoBehaviour
         can.SetActive(true);
     }
 
-  public void CreditsOff()
-  {
-    can.SetActive(false);
-  }
+    public void CreditsOff()
+    {
+        can.SetActive(false);
+    }
 
-  public void ExitGame()
+    public void ExitGame()
     {
 
     }
