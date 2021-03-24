@@ -12,7 +12,8 @@ public class NetworkManagerPhoton : MonoBehaviourPunCallbacks
     {
         NetworkTestSpawning,
         VRDemoScene,
-        InteractablesTestScene
+        InteractablesTestScene,
+        EnviornmentScene
     }
 
 
