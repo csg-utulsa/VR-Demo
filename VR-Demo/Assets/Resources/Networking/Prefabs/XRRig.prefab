@@ -322,8 +322,8 @@ MonoBehaviour:
   - {fileID: 3196789895749946415}
   - {fileID: 696637113624291413}
   - {fileID: 6118161655402339144}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5075712103941414344}
+  - {fileID: 6887503340492058745}
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6835807897463974985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
   m_Name: 
@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6835807897771800253}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
   m_Name: 
