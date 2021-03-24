@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     public InputField roomName;
-    // Start is called before the first frame update
-    void Start()
+    public Canvas can; // Assign in inspector
+    can = GameObject.FindGameObjectWithTag("Credits").GetComponent<Canvas>();
+
+  // Start is called before the first frame update
+  void Start()
     {
     }
 
@@ -17,16 +20,27 @@ public class MenuManager : MonoBehaviour
 
     }
 
-    public void JoinGame()
+    public void JoinGamePlayer()
     {
         ChooseCharacter(0);
         NetworkManagerPhoton.instance.JoinRoom();
     }
 
-    public void ChooseCharacter(int type)
+  public void JoinGameRover()
+  {
+    ChooseCharacter(1);
+    NetworkManagerPhoton.instance.JoinRoom();
+  }
+
+  public void ChooseCharacter(int type)
     {
         PlayerPrefs.SetInt("PlayerType", type);
         LoadGameScene();
+    }
+
+    public void toggleCredits()
+    {
+        can.enabled = !can.enabled;
     }
 
     public void ExitGame()
