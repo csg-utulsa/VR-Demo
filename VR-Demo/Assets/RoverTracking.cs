@@ -42,12 +42,20 @@ public class RoverTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Euler(0, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, 0);
+        if(cameraMode == CameraMode.FirstPerson)
+        {
+            FirstPersonUpdate();
+        }
+        else
+        {
+            ThirdPersonUpdate();
+        }
     }
 
     private void FirstPersonUpdate()
     {
         transform.rotation = Quaternion.Euler(0, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, 0);
+        transform.position = CameraOffsetTransform.position - FirstPersonOffset;
     }
 
     private void ThirdPersonUpdate()
@@ -62,6 +70,6 @@ public class RoverTracking : MonoBehaviour
         }*/
 
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, transform.rotation.eulerAngles.z);
-
+        transform.position = CameraOffsetTransform.position - ThirdPersonOffset;
     }
 }
