@@ -1376,6 +1376,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3243977217230605372, guid: ca24d140b08577742aeeb42d2f5949e0,
+        type: 3}
+      propertyPath: m_OnActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821655018}
+    - target: {fileID: 3243977217230605372, guid: ca24d140b08577742aeeb42d2f5949e0,
+        type: 3}
+      propertyPath: m_OnActivate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243977217230605372, guid: ca24d140b08577742aeeb42d2f5949e0,
+        type: 3}
+      propertyPath: m_OnActivate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pistol, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243977217230605372, guid: ca24d140b08577742aeeb42d2f5949e0,
+        type: 3}
+      propertyPath: m_OnActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3873612625660923768, guid: ca24d140b08577742aeeb42d2f5949e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -1453,6 +1473,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca24d140b08577742aeeb42d2f5949e0, type: 3}
+--- !u!114 &821655018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1329814587411956915, guid: ca24d140b08577742aeeb42d2f5949e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 821325853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc707e14713cd8a429b8680adf4863a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &905680553
 PrefabInstance:
   m_ObjectHideFlags: 0
