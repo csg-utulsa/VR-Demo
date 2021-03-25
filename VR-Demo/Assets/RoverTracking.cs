@@ -70,6 +70,6 @@ public class RoverTracking : MonoBehaviour
         }*/
 
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, transform.rotation.eulerAngles.z);
-        transform.position = CameraOffsetTransform.position - ThirdPersonOffset;
+        transform.position = CameraOffsetTransform.position - ThirdPersonOffset.magnitude * transform.forward;
     }
 }
