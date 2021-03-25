@@ -14,62 +14,63 @@ public class RoverTracking : MonoBehaviour
     public CameraMode cameraMode;
     public Vector3 FirstPersonOffset;
     public Vector3 ThirdPersonOffset;
-    public float turnSpeed = 10f;
-    public float yOffset;
+    public float yRotOffset;
 
-    private Vector3 lastPos = Vector3.zero;
-    private Vector3 curPos = Vector3.zero;
+    private float theta;
+    private float radius;
+    private float yPosOffset;
 
     private void Awake()
     {
+        Vector3 offset;
+
         if (cameraMode == CameraMode.FirstPerson)
         {
-            CameraOffsetTransform.position = transform.position + FirstPersonOffset;
+            offset = FirstPersonOffset;
+            
         }
         else
         {
-            CameraOffsetTransform.position = transform.position + ThirdPersonOffset;
+            offset = ThirdPersonOffset;
         }
-        
-    }
 
-    private void Start()
-    {
-        curPos = transform.position;
-        lastPos = transform.position;
+        Debug.Log($"Start: {transform.position}\nOffset: {offset}\nResult: {transform.position + offset}");
+
+        CameraOffsetTransform.position = transform.position + offset;
+        theta = Mathf.Atan(offset.x / offset.z);
+
+        if(offset.x * offset.z < 0)
+        {
+            theta += Mathf.PI;
+        }
+
+        radius = -Mathf.Sqrt(Mathf.Pow(offset.x, 2) + Mathf.Pow(offset.z, 2));
+        yPosOffset = offset.y;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(cameraMode == CameraMode.FirstPerson)
-        {
-            FirstPersonUpdate();
-        }
-        else
-        {
-            ThirdPersonUpdate();
-        }
+        float camRot = CameraOffsetTransform.rotation.eulerAngles.y;
+        transform.rotation = Quaternion.Euler(0, camRot + yRotOffset, 0);
+        transform.position = CameraOffsetTransform.position - new Vector3(radius * Mathf.Sin(Mathf.Deg2Rad * camRot + theta), yPosOffset, radius * Mathf.Cos(Mathf.Deg2Rad * camRot + theta));
     }
 
-    private void FirstPersonUpdate()
+    /*private void FirstPersonUpdate()
     {
-        transform.rotation = Quaternion.Euler(0, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, 0);
-        transform.position = CameraOffsetTransform.position + Quaternion.Euler(0, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, 0) * FirstPersonOffset - 2 * new Vector3(0, FirstPersonOffset.y, 0);
+        float camRot = CameraOffsetTransform.rotation.eulerAngles.y;
+        transform.rotation = Quaternion.Euler(0, CameraOffsetTransform.rotation.eulerAngles.y + yRotOffset, 0);
+        //transform.position = CameraOffsetTransform.position + Quaternion.Euler(0, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, 0) * FirstPersonOffset - 2 * new Vector3(0, FirstPersonOffset.y, 0);
+        transform.position = CameraOffsetTransform.position - new Vector3(radius * Mathf.Sin(Mathf.Deg2Rad * camRot - theta), yPosOffset, radius * Mathf.Cos(Mathf.Deg2Rad * camRot - theta));
     }
 
     private void ThirdPersonUpdate()
     {
-        /*lastPos = curPos;
-        curPos = transform.position;
+        float camRot = CameraOffsetTransform.rotation.eulerAngles.y;
 
-        if(curPos != lastPos)
-        {
-            //transform.LookAt(curPos + (curPos - lastPos));
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(curPos - lastPos), Time.deltaTime * turnSpeed);
-        }*/
-
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, transform.rotation.eulerAngles.z);
-        transform.position = CameraOffsetTransform.position + Quaternion.Euler(0, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, 0) * ThirdPersonOffset - 2 * new Vector3(0, ThirdPersonOffset.y, 0);
-    }
+        transform.rotation = Quaternion.Euler(0, camRot + yOffset, 0);
+        //transform.position = CameraOffsetTransform.position + Quaternion.Euler(0, CameraOffsetTransform.rotation.eulerAngles.y + yOffset, 0) * ThirdPersonOffset - 2 * new Vector3(0, ThirdPersonOffset.y, 0);       
+        transform.position = CameraOffsetTransform.position - new Vector3(radius * Mathf.Sin(Mathf.Deg2Rad * camRot - theta), ThirdPersonOffset.y, radius * Mathf.Cos(Mathf.Deg2Rad * camRot - theta));
+    }*/
 }
