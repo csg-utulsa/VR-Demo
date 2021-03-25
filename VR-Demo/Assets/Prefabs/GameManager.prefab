@@ -90,5 +90,6 @@ MonoBehaviour:
   startMenuName: NetworkTestMenu
   playerPrefabs:
   - {fileID: 2011475181158567433, guid: 81b86b10e47c6fd498e2a25141789d06, type: 3}
+  - {fileID: 5477192480969271169, guid: da21ecfa3720b19468c6297fe63c308c, type: 3}
   spawnLocations:
   - {fileID: 4745243261739230778}

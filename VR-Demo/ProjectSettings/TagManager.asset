@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - InteractableDefault
+  - Credits
   layers:
   - Default
   - TransparentFX
