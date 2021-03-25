@@ -19,10 +19,13 @@ public class RoverTracking : MonoBehaviour
     private float theta;
     private float radius;
     private float yPosOffset;
+    private Vector3 lastPos;
+    private Animator animator;
 
     private void Awake()
     {
         Vector3 offset;
+        animator = GetComponent<Animator>();
 
         if (cameraMode == CameraMode.FirstPerson)
         {
@@ -37,11 +40,14 @@ public class RoverTracking : MonoBehaviour
         Debug.Log($"Start: {transform.position}\nOffset: {offset}\nResult: {transform.position + offset}");
 
         CameraOffsetTransform.position = transform.position + offset;
-        theta = Mathf.Atan(offset.x / offset.z);
 
-        if(offset.x * offset.z < 0)
+        if(offset.z < 0)
         {
-            theta += Mathf.PI;
+            theta = Mathf.PI;
+        }
+        else
+        {
+            theta = 0;
         }
 
         radius = -Mathf.Sqrt(Mathf.Pow(offset.x, 2) + Mathf.Pow(offset.z, 2));
@@ -55,6 +61,16 @@ public class RoverTracking : MonoBehaviour
         float camRot = CameraOffsetTransform.rotation.eulerAngles.y;
         transform.rotation = Quaternion.Euler(0, camRot + yRotOffset, 0);
         transform.position = CameraOffsetTransform.position - new Vector3(radius * Mathf.Sin(Mathf.Deg2Rad * camRot + theta), yPosOffset, radius * Mathf.Cos(Mathf.Deg2Rad * camRot + theta));
+
+        if(lastPos != transform.position)
+        {
+            animator.SetBool("Walking", true);
+            lastPos = transform.position;
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
+        }
     }
 
     /*private void FirstPersonUpdate()
