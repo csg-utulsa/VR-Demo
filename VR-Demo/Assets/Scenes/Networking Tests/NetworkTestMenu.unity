@@ -747,7 +747,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 0, y: -180}
+=======
+  m_AnchoredPosition: {x: 0, y: -178}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &478932186
@@ -1134,7 +1138,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -150, y: -25}
+=======
+  m_AnchoredPosition: {x: -200, y: -25}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &969977358
@@ -1300,7 +1308,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 150, y: 25, z: 20}
+  m_Size: {x: 150, y: 150, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1193100596
 GameObject:
@@ -1947,7 +1955,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 150, y: -25}
+=======
+  m_AnchoredPosition: {x: 200, y: -25}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1930447019
@@ -1961,7 +1973,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 150, y: 25, z: 20}
+  m_Size: {x: 150, y: 150, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1930447020
 MonoBehaviour:
