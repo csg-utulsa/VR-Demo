@@ -7,12 +7,14 @@ public class MenuManager : MonoBehaviour
 {
     public InputField roomName;
     public GameObject can;
+  public GameObject maincan;
 
     // Start is called before the first frame update
     void Start()
     {
         can = GameObject.FindGameObjectWithTag("Credits").GetComponent<GameObject>();
-    }
+        maincan = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<GameObject>();
+  }
 
     // Update is called once per frame
     void Update()
@@ -41,12 +43,14 @@ public class MenuManager : MonoBehaviour
     public void CreditsOn()
     {
         can.SetActive(true);
+        maincan.SetActive(false);
     }
 
     public void CreditsOff()
     {
         can.SetActive(false);
-    }
+        maincan.SetActive(true);
+  }
 
     public void ExitGame()
     {
