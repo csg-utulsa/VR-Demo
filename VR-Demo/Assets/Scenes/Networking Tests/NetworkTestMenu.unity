@@ -798,7 +798,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1592892027}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: CreditsOn
+        m_MethodName: toggleCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1503,9 +1503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2a4f0b47082bf4f8da1906302e797e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: {fileID: 0}
-  can: {fileID: 0}
-  maincan: {fileID: 0}
+  mainMenu: {fileID: 253831917}
+  creditsMenu: {fileID: 62462961}
 --- !u!4 &1592892028
 Transform:
   m_ObjectHideFlags: 0
@@ -1717,7 +1716,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1592892027}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: CreditsOff
+        m_MethodName: toggleCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
