@@ -598,7 +598,7 @@ MonoBehaviour:
   - VR-Demo-Scene
   - InteractablesTestScene
   - Terrain
-  gameplayScene: 3
+  gameplayScene: 2
 --- !u!4 &375867982
 Transform:
   m_ObjectHideFlags: 0
